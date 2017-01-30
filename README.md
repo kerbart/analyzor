@@ -1,2 +1,4 @@
 # analyzor
-Simple MVC sample project to analyse PHP security issues
+
+Simple MVC sample project to analyse PHP security issues.
+

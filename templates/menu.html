@@ -1,0 +1,86 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+
+        <ion-nav-buttons side="right" id="cart_top_icon">
+        <button  ng-click="goToCart()"
+        	class="button button-icon button-clear ion-android-notifications-none" >
+        (3)
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="custom-menu">
+
+    <ion-content>
+    <div class="padding" style="text-align:center">   
+    </div>
+      <ion-list>
+        <ion-item
+        	menu-close
+        	class="item-icon-left"
+        	href="#/app/home"
+        	 >
+          <i class="icon ion-ios-home"></i>
+          Accueil
+        </ion-item>
+         <ion-item
+        	ng-if="userIsConnected()"
+        	menu-close
+        	class="item-icon-left"
+        	href="#/app/cabinet"
+        	>
+        	<i class="icon ion-ios-briefcase-outline"></i>
+        	Mon cabinet
+        </ion-item>
+        <ion-item
+        	menu-close
+        	class="item-icon-left"
+        	href="#/app/patients"
+        	 >
+          <i class="icon ion-ios-people"></i>
+          Patients
+        </ion-item>
+        <ion-item
+        	menu-close
+        	class="item-icon-left"
+        	href="#/app/tournees"
+        	 >
+          <i class="icon ion-ios-medkit"></i>
+          Tournées
+        </ion-item>
+        <ion-item
+        	ng-if="!userIsConnected()"
+        	menu-close
+        	class="item-icon-left"
+        	href="#/app/login">
+        	<i class="icon ion-log-in"></i>
+          Se connecter
+        </ion-item>
+
+          <ion-item
+        	ng-if="userIsConnected()"
+        	menu-close
+        	class="item-icon-left"
+        	href="#/app/login"
+        	ng-click="logout()">
+        	<i class="icon ion-log-out"></i>
+          Se déconnecter
+        </ion-item>
+
+
+
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

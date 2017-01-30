@@ -1,0 +1,37 @@
+<ion-view view-title="PHP Security Analysor">
+
+  <ion-content>
+
+		<input ng-model="mv.directoryToAnalyse" /><button ng-click="lauchAnalyse()">Analyse</button>
+
+		Will analyse : {{mv.directoryToAnalyse}}
+
+		<table style="width:100%;border:1">
+				<tr>
+						<th>File</th>
+						<th>Line</th>
+						<th>Parameter type</th>
+						<th>Name</th>
+						<th>Critical ?</th>
+				</tr>
+				<tr ng-repeat="(key, breach) in breaches">
+						<td>
+							{{breach.file}}
+						</td>
+						<td>
+							{{breach.num_line}}
+						</td>
+						<td>
+							{{breach.type}}
+						</td>
+						<td>
+							{{breach.parameter}}
+						</td>
+						<td>
+							{{breach.critical}}
+						</td>
+				</tr>
+		</table>
+
+  </ion-content>
+</ion-view>
