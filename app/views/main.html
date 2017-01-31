@@ -1,9 +1,14 @@
+
+
+
+
+
 <div class="jumbotron">
   <p>Enter the absolute path of your folder to analyse...</p>
   <p class="lead">
-    <input type="text" ng-model="vm.directory" />
+    <input type="text" ng-model="vm.directory" style="width: 500px" />
   </p>
-  <p><a class="btn btn-lg btn-success" ng-click="launchAnalysis()">Analyse !<span class="glyphicon glyphicon-ok"></span></a></p>
+  <p><a class="btn btn-lg btn-success" ng-click="launchAnalysis()">Analyse ! <span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
 <div class="alert alert-danger" ng-if="vm.errorMessage">
@@ -19,7 +24,7 @@
 </div>
 </div>
 
-<table class="table" ng-if="vm.data">
+<table class="table table-bordered table-striped" ng-if="vm.data">
   <tr>
     <th>File
     <th>Line Number

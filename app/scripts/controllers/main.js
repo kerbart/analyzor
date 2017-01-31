@@ -15,8 +15,9 @@ angular.module('analysorApp')
       // will launch analysis
       $scope.launchAnalysis = function() {
           $scope.vm.inProgressMessage = true;
-          $scope.vm.data = [];
-          $http.get("/index.php/analyse?directory=" + $scope.vm.directory).then(
+          $scope.vm.errorMessage = false;
+              $scope.vm.data = [];
+          $http.get("/index.php/analysePhp?directory=" + $scope.vm.directory).then(
               function(response) {
                 console.log("response is", response);
                   $scope.vm.inProgressMessage = false;

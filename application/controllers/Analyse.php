@@ -54,8 +54,6 @@ class Analyse extends CI_Controller {
 
 			 if (sizeof($matches) > 0) {
 
-
-
 					 preg_match("/.*POST\[(.*)\].*/", $value, $matches_POST);
 					 if (sizeof($matches_POST) > 0) {
 							 array_push($result_computed, array(
@@ -78,8 +76,7 @@ class Analyse extends CI_Controller {
 											"line" => substr($value, strrpos($value, ':')),
 											"num_line" => $last_found_file_line,
 											"critical" => is_critical($value),
-											"isVariable" => is_variable($matches_GET[1]),
-											"otherParam" => "something"
+											"isVariable" => is_variable($matches_GET[1])
 									));
 					 }
 			 } else {
