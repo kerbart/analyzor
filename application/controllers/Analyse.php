@@ -88,14 +88,12 @@ class Analyse extends CI_Controller {
 
 
 	 }
-/*
 	 $this->output
 		 ->set_content_type('application/json')
 		 ->set_output(json_encode($result_computed));
 	}
-	*/
 
-
+/*
 	foreach ($result_computed as $key => $value) {
 if ($value["critical"] ) {
 			echo "<div style='border:1px solid black;margin:10px;padding:5px'>" .
@@ -110,7 +108,8 @@ if ($value["critical"] ) {
 		";
 	}
 	}
-}
+*/
+
 
 }
 
